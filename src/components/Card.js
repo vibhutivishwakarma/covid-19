@@ -22,12 +22,7 @@ export default class Card extends Component {
       .then((json) => {
         this.setState({ items: json.response });
       });
-      // fetch("http://localhost:3300/news").then(data=> data.json()).then(data=> console.log(data,"new api"))
   }
-
-  // datadedo = () => {
-  //   console.log(this.state.items, "data");
-  // };
 
   getCountry = () => {
     let countries = [];
@@ -49,23 +44,12 @@ export default class Card extends Component {
     });
   };
 
-  // getCountryData = ()=>{
-  //   if(this.state.items){
-  //     this.activeCase();
-  //   }
-  //   else if(this.state.country){
-  //      this.state.country.map((element) => element.cases?.active)
-  //   }
-    
-  // }
-
   activeCase = () => {
     let count = 0;
     if (this.state.items) {
       this.state.items.forEach((element) => {
         count = count + element.cases.active;
       });
-      // console.log(count)
     }
     return count;
   };
@@ -95,8 +79,6 @@ export default class Card extends Component {
     return (
       <>
         <div className="container text-center">
-          {/* <button onClick={this.datadedo}>data chahiye</button> */}
-
           <select
             className="dropdown my-3 text-center"
             onChange={this.handleCountry}>
@@ -133,9 +115,6 @@ export default class Card extends Component {
               </div>
             </div>
           </div>
-          {/* <div className="active">{this.state.country.cases?.active}</div>
-          <div className="recovered">{this.state.country.cases?.recovered}</div>
-          <div className="death">{this.state.country.deaths?.total}</div> */}
         </div>       
         <Table item={this.state.items}/>
       </>
