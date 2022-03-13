@@ -1,3 +1,49 @@
+*body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-heading{
+  background-color: #d1e7dd;
+  padding: 10px;
+  color: #484a46;
+}
+
+.dropdown{
+  border-radius: 2px;
+  border: 0;
+  border-bottom: 2px solid #d1e7dd;
+  color: #484a46;
+}
+
+.card{
+  height: 125px;
+  width: 238px;
+  padding-top: 20px;
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+.totalActive{
+  border-bottom: 8px solid #9ad310a3;
+}
+
+.totalRecovered{
+  border-bottom: 8px solid #5187cda3;
+}
+
+.totalDeaths{
+  border-bottom: 8px solid #e95f5f;
+}
+
+.cardheader{
+  font-size: 20px;
+  font-weight: 500;
+  color: #484a46;
+}
+
+
 .App {
   text-align: center;
 }
